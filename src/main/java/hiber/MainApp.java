@@ -15,11 +15,10 @@ public class MainApp {
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
         UserService userService = context.getBean(UserService.class);
-
-//        userService.add(new User("Katya", "Ivanova", "Kate@mail.ru", new Car("Audi", 100)));
-//        userService.add(new User("Alexei", "Petrov", "Alex@mail.ru", new Car("Mazda", 3)));
-//        userService.add(new User("Kostya", "Sidorov", "Kost@mail.ru", new Car("BMW", 5)));
-//        userService.add(new User("Elena", "Nikolaeva", "Helen@mail.ru", new Car("Mercedes", 600)));
+        userService.add(new User("Katya", "Ivanova", "Kate@mail.ru", new Car("Audi", 100)));
+        userService.add(new User("Alexei", "Petrov", "Alex@mail.ru", new Car("Mazda", 3)));
+        userService.add(new User("Kostya", "Sidorov", "Kost@mail.ru", new Car("BMW", 5)));
+        userService.add(new User("Elena", "Nikolaeva", "Helen@mail.ru", new Car("Mercedes", 600)));
 
         List<User> users = userService.listUsers();
         for (User user : users) {
@@ -32,6 +31,7 @@ public class MainApp {
             System.out.println("Car series = " + user.getUserCar().getSeries());
             System.out.println();
         }
+        System.out.println(userService.getUserByCar("BMW", 5));
         System.out.println(userService.getUserByCar("Audi", 100));
         context.close();
     }
