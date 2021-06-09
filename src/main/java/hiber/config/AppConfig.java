@@ -56,18 +56,3 @@ public class AppConfig {
         return transactionManager;
     }
 }
-
-////CREATE TABLE my_database.cars (
-////  car_id int NOT NULL AUTO_INCREMENT,
-////  series int NOT NULL,
-////  model varchar(25),
-////  PRIMARY KEY (car_id));
-////
-////CREATE TABLE my_database.users (
-////  id int NOT NULL AUTO_INCREMENT,
-////  name varchar(25),
-////  last_name varchar(25),
-////  email varchar(25),
-////  car_id int,
-////  PRIMARY KEY (id)
-////, FOREIGN KEY (car_id) REFERENCES my_database.cars(car_id));

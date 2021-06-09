@@ -13,8 +13,8 @@ public class MainApp {
     public static void main(String[] args) throws SQLException {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(AppConfig.class);
-
         UserService userService = context.getBean(UserService.class);
+
         userService.add(new User("Katya", "Ivanova", "Kate@mail.ru", new Car("Audi", 100)));
         userService.add(new User("Alexei", "Petrov", "Alex@mail.ru", new Car("Mazda", 3)));
         userService.add(new User("Kostya", "Sidorov", "Kost@mail.ru", new Car("BMW", 5)));
